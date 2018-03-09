@@ -1,13 +1,10 @@
 setwd("/Volumes/Research/WWTranscription/")
-#sequencedata = read.csv("/Volumes/Research/WWTranscription/BidirectionalContingencies/sequencecodes.csv",header=TRUE)
-#sequencedata = read.csv("/Volumes/Research/WWTranscription/WWScripts/Regression/sequencecodes1sec06262017.csv",header=TRUE)
-#sequencedata = read.csv("/Volumes/Research/WWTranscription/WWScripts/Regression/sequencecodes2sec06262017.csv",header=TRUE)
 sequencedata = read.csv("/Volumes/Research/WWTranscription/WWScripts/Regression/sequencecodes5sec.csv",header=TRUE)
 
 
 
 
-## Variables for Section II
+## Variables for Section I
 InfantVoc_NotToChild = length(which(sequencedata$seqcode=="CN" | sequencedata$seqcode=="XN" | sequencedata$seqcode=="RN"))
 InfantVoc_NNotToChild = length(which(sequencedata$seqcode=="CT" | sequencedata$seqcode=="CU" | sequencedata$seqcode=="CP" | sequencedata$seqcode=="CC" | sequencedata$seqcode=="CX" | sequencedata$seqcode=="CR" | sequencedata$seqcode=="XT" | sequencedata$seqcode=="XU" | sequencedata$seqcode=="XP" | sequencedata$seqcode=="XC" | sequencedata$seqcode=="XX" | sequencedata$seqcode=="XR" | sequencedata$seqcode=="RT" | sequencedata$seqcode=="RU" | sequencedata$seqcode=="RP" | sequencedata$seqcode=="RC" | sequencedata$seqcode=="RX" | sequencedata$seqcode=="RR"))
 InfantVoc_ToChild = length(which(sequencedata$seqcode=="CT"| sequencedata$seqcode=="XT" | sequencedata$seqcode=="RT"))
@@ -26,7 +23,7 @@ NToChild_InfantVoc = length(which(sequencedata$seqcode=="NC" | sequencedata$seqc
 NToChild_NInfantVoc = length(which(sequencedata$seqcode=="NT" | sequencedata$seqcode=="NN" | sequencedata$seqcode=="NU" | sequencedata$seqcode=="NP" | sequencedata$seqcode=="UT" | sequencedata$seqcode=="UN"| sequencedata$seqcode=="UU" | sequencedata$seqcode=="UP" | sequencedata$seqcode=="TT" | sequencedata$seqcode=="TN" | sequencedata$seqcode=="TU" | sequencedata$seqcode=="TP" | sequencedata$seqcode=="PP" | sequencedata$seqcode== "PN" | sequencedata$seqcode=="PU" | sequencedata$seqcode=="PP" | sequencedata$seqcode=="CT" | sequencedata$seqcode=="CN" | sequencedata$seqcode=="CU" | sequencedata$seqcode=="CP" | sequencedata$seqcode=="XT" | sequencedata$seqcode=="XN" | sequencedata$seqcode=="XU" | sequencedata$seqcode=="XP" | sequencedata$seqcode=="RT" | sequencedata$seqcode=="RN" | sequencedata$seqcode=="RU" | sequencedata$seqcode=="RP"))
 
 
-## Variables for Section III
+## Variables for Section II
 Proto_ToChild = length(which(sequencedata$seqcode =="CT" | sequencedata$seqcode =="XT" ))
 Reflex_ToChild = length(which(sequencedata$seqcode =="RT"))
 Proto_NToChild = length(which(sequencedata$seqcode == "CN" | sequencedata$seqcode =="CU" | sequencedata$seqcode =="CP" | sequencedata$seqcode =="XN" | sequencedata$seqcode =="XU" | sequencedata$seqcode =="XP" | sequencedata$seqcode =="CC" | sequencedata$seqcode =="CX" | sequencedata$seqcode =="CR" | sequencedata$seqcode =="XC" | sequencedata$seqcode =="XX" | sequencedata$seqcode =="XR"))
@@ -45,7 +42,7 @@ NNotToChild_Proto = length(which(sequencedata$seqcode =="NR" | sequencedata$seqc
 NNotToChild_Reflex = length(which(sequencedata$seqcode =="TR" | sequencedata$seqcode =="UR" | sequencedata$seqcode =="PR" | sequencedata$seqcode =="CR" | sequencedata$seqcode =="XR" | sequencedata$seqcode =="RR"))
 
 
-## Variables for Section IV
+## Variables for Section III
 Canon_ToChild = length(which(sequencedata$seqcode=="CT"))
 Canon_NToChild = length(which(sequencedata$seqcode=="CN" | sequencedata$seqcode=="CU" | sequencedata$seqcode=="CP" | sequencedata$seqcode=="CC" | sequencedata$seqcode=="CR" | sequencedata$seqcode=="CX"))
 NonCanon_ToChild = length(which(sequencedata$seqcode=="XT"))
@@ -298,7 +295,7 @@ calcOddsRatio(matrix4,alpha=0.05)
 
 
 
-## Matrices for Section III
+## Matrices for Section II
 
 matrix5 <- matrix(c(Proto_ToChild, Proto_NToChild, Reflex_ToChild, Reflex_NToChild), nrow=2, byrow=TRUE)
 colnames(matrix5) <- c("ToChild", "NToChild")
@@ -521,7 +518,7 @@ calcOddsRatio <- function(matrix8,alpha=0.05,referencerow=2,quiet=FALSE){
 calcOddsRatio(matrix8,alpha=0.05)
 
 
-## Matrices for Section IV
+## Matrices for Section III
 
 matrix9 <- matrix(c(Canon_ToChild, NonCanon_ToChild, Canon_NToChild, NonCanon_NToChild), nrow=2, byrow=TRUE)
 colnames(matrix9) <- c("ToChild","NToChild")
