@@ -1,0 +1,78 @@
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: meanf0mel ~ (1 | InfantID) + addressee
+   Data: subset(adultUttInfo, addressee == "N" | addressee == "T")
+
+REML criterion at convergence: 39769
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-2.3069 -0.6704 -0.1185  0.4739  4.6976 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ InfantID (Intercept)  456.1   21.36   
+ Residual             5494.3   74.12   
+Number of obs: 3470, groups:  InfantID, 19
+
+Fixed effects:
+            Estimate Std. Error       df t value Pr(>|t|)    
+(Intercept)  212.086      5.339   21.855  39.723  < 2e-16 ***
+addresseeT    23.276      2.969 3240.753   7.841 6.03e-15 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+           (Intr)
+addresseeT -0.298
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: stdf0mel ~ (1 | InfantID) + addressee
+   Data: subset(adultUttInfo, addressee == "N" | addressee == "T")
+
+REML criterion at convergence: 35501.9
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-2.1463 -0.7160 -0.2100  0.4969  5.5443 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ InfantID (Intercept)  144.8   12.03   
+ Residual             1643.2   40.54   
+Number of obs: 3462, groups:  InfantID, 19
+
+Fixed effects:
+            Estimate Std. Error       df t value Pr(>|t|)    
+(Intercept)   52.578      2.995   20.930  17.555 5.34e-14 ***
+addresseeT    -3.453      1.627 3252.469  -2.123   0.0338 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+           (Intr)
+addresseeT -0.291
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: intensity ~ (1 | InfantID) + addressee
+   Data: subset(adultUttInfo, addressee == "N" | addressee == "T")
+
+REML criterion at convergence: 24168.9
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-4.0641 -0.6506  0.1366  0.7287  2.7915 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ InfantID (Intercept) 13.68    3.698   
+ Residual             47.27    6.875   
+Number of obs: 3600, groups:  InfantID, 19
+
+Fixed effects:
+             Estimate Std. Error        df t value Pr(>|t|)    
+(Intercept)   63.5343     0.8701   18.8493   73.02   <2e-16 ***
+addresseeT     5.3822     0.2712 3594.4559   19.84   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+           (Intr)
+addresseeT -0.165
