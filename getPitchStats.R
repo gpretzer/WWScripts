@@ -100,3 +100,21 @@ for (uttnum in 1:nrow(adultUttInfo)){
 }
 
 write.csv(adultUttInfo,file="adultUttInfo.csv")
+
+adultUttInfo = read.csv("adultUttInfo.csv")
+
+library(lme4)
+library(lmerTest)
+
+sink("pitch_results.txt")
+
+meanf0mel_test = lmer(meanf0mel ~ (1|InfantID) + addressee, dat = subset(adultUttInfo,addressee=="N"|addressee=="T"))
+summary(meanf0mel_test)
+
+stdf0mel_test = lmer(stdf0mel ~ (1|InfantID) + addressee, dat = subset(adultUttInfo,addressee=="N"|addressee=="T"))
+summary(stdf0mel_test)
+
+intensity_test = lmer(intensity ~ (1|InfantID) + addressee, dat = subset(adultUttInfo,addressee=="N"|addressee=="T"))
+summary(intensity_test)
+
+sink()
