@@ -8,5 +8,6 @@ To Pitch... 0 75 1000
 meanf0Hz = Get mean... 0 0 Hertz
 meanf0mel = Get mean... 0 0 mel
 stdf0mel = Get standard deviation... 0 0 mel
+stdf0Hz = Get standard deviation... 0 0 Hertz
 
-writeInfoLine: intensity, ",", meanf0Hz, ",", meanf0mel, ",", stdf0mel
+writeInfoLine: intensity, ",", meanf0Hz, ",", meanf0mel, ",", stdf0mel, ",", stdf0Hz

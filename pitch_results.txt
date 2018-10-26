@@ -51,6 +51,32 @@ Correlation of Fixed Effects:
            (Intr)
 addresseeT -0.291
 Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: stdf0Hz ~ (1 | InfantID) + addressee
+   Data: subset(adultUttInfo, addressee == "N" | addressee == "T")
+
+REML criterion at convergence: 39585
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-2.0039 -0.6894 -0.2507  0.4283  5.7022 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ InfantID (Intercept)  447.2   21.15   
+ Residual             5349.4   73.14   
+Number of obs: 3462, groups:  InfantID, 19
+
+Fixed effects:
+            Estimate Std. Error       df t value Pr(>|t|)    
+(Intercept)   86.190      5.285   21.120  16.308 1.91e-13 ***
+addresseeT    -5.088      2.933 3228.230  -1.734    0.083 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+           (Intr)
+addresseeT -0.297
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
 Formula: intensity ~ (1 | InfantID) + addressee
    Data: subset(adultUttInfo, addressee == "N" | addressee == "T")
 

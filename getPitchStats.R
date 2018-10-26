@@ -15,7 +15,8 @@ adultUttInfo = data.frame(
                           intensity = numeric(),
                           meanf0Hz = numeric(),
                           meanf0mel = numeric(),
-                          stdf0mel = numeric()
+                          stdf0mel = numeric(),
+                          stdf0Hz = numeric()
                           )
 
 # Get the utterance data out of the annotation txt files and into adultUttInfo
@@ -44,7 +45,8 @@ for (fiveminnum in 1:nrow(fivemin_info)){
                           intensity = NA,
                           meanf0Hz = NA,
                           meanf0mel = NA,
-                          stdf0mel = NA
+                          stdf0mel = NA,
+                          stdf0Hz = NA
                           )
       adultUttInfo = rbind(adultUttInfo,newRow)
     }
@@ -65,6 +67,7 @@ for (uttnum in 1:nrow(adultUttInfo)){
     adultUttInfo$meanf0Hz[uttnum] = NA
     adultUttInfo$meanf0mel[uttnum] = NA
     adultUttInfo$stdf0mel[uttnum] = NA
+    adultUttInfo$stdf0Hz[uttnum] = NA
   } else{
     
     argstext = paste("--run getPitchStats.Praat \'",uttWavFile,"\'",sep="")
@@ -95,6 +98,12 @@ for (uttnum in 1:nrow(adultUttInfo)){
       adultUttInfo$stdf0mel[uttnum] = as.numeric(splitPraatOutput[[1]][4])
     }
     
+    if (splitPraatOutput[[1]][5]=="--undefined--"){
+      adultUttInfo$stdf0Hz[uttnum] = NA
+    } else{
+      adultUttInfo$stdf0Hz[uttnum] = as.numeric(splitPraatOutput[[1]][5])
+    }
+    
   }
   
 }
@@ -113,6 +122,9 @@ summary(meanf0mel_test)
 
 stdf0mel_test = lmer(stdf0mel ~ (1|InfantID) + addressee, dat = subset(adultUttInfo,addressee=="N"|addressee=="T"))
 summary(stdf0mel_test)
+
+stdf0Hz_test = lmer(stdf0Hz ~ (1|InfantID) + addressee, dat = subset(adultUttInfo,addressee=="N"|addressee=="T"))
+summary(stdf0Hz_test)
 
 intensity_test = lmer(intensity ~ (1|InfantID) + addressee, dat = subset(adultUttInfo,addressee=="N"|addressee=="T"))
 summary(intensity_test)
