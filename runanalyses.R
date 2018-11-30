@@ -1,8 +1,8 @@
-setwd("/Volumes/Research/WWTranscription/WWScripts")
-#setwd("/Users/awarlau/LENAInteraction/GinaWW/WWScripts")
+#setwd("/Volumes/Research/WWTranscription/WWScripts")
 
-txtpath = "/Volumes/Research/WWTranscription/WWtxtFiles"
-outputpath = "/Volumes/Research/WWTranscription/BidirectionalContingencies/"
+#txtpath = "/Volumes/Research/WWTranscription/WWtxtFiles"
+#outputpath = "/Volumes/Research/WWTranscription/BidirectionalContingencies/"
+txtpath = "/Users/awarlau/Documents/Box Sync/Gina/WWtxtFiles/"
 
 source("spkrcode.R")
 source("pauseoverlap.R")
@@ -12,7 +12,7 @@ source("sequenceevents.R")
 metadata = read.csv("direction_analysis.csv", header=T) 
 
 # Set how long should be counted as a pause
-pausedur = 5
+pausedur = 1
 
 # For loop to do the recoding and event sequencing for all 5 minute segments.
 for (fiveminnum in 1:nrow(metadata)){ 
@@ -32,7 +32,9 @@ for (fiveminnum in 1:nrow(metadata)){
 	
 }
 
-write.csv(sequencecodes, file = "/Volumes/Research/WWTranscription/WWScripts/Regression/sequencecodes5secsplit12052017.csv")
+write.csv(sequencecodes, file = "sequencecodes1sec11302018.csv")
+
+# write.csv(sequencecodes, file = "/Volumes/Research/WWTranscription/WWScripts/Regression/sequencecodes5secsplit12052017.csv")
 
 # write.csv(sequencecodes, file = "/Volumes/Research/WWTranscription/BidirectionalContingencies/sequencecodes06192017.csv")
 
