@@ -1,8 +1,8 @@
-setwd("/Volumes/Research/WWTranscription/WWScripts/Regression/")
+# setwd("/Volumes/Research/WWTranscription/WWScripts/Regression/")
 # setwd("/Users/ginapretzer/Desktop/WWScripts/Regression/")
 
 ### Read in csv ###
-seqcodes <- read.csv("sequencecodes5sec.csv", header = TRUE)
+seqcodes <- read.csv("sequencecodes5sec12052017.csv", header = TRUE)
 
 ### create new dataframe ###
 eventcodes <- data.frame(InfantID=seqcodes$InfantID,
@@ -121,5 +121,5 @@ for (i in 1:nrow(eventcodes)) {
 }	
 
 ### Write to .csv file ###
-write.csv(eventcodes, "eventcodes5sec06292017.csv")
+write.csv(eventcodes, "eventcodes5sec11302018.csv")
 
