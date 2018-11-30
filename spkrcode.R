@@ -26,7 +26,8 @@ spkrcode = function(path, file) {
 			} else if (annotations$InfIPA[crow] == "cry" ) {
 				annotations$SpkrCode[crow] = "R" 	
 				} else if (annotations$InfIPA[crow] == "laugh") {
-				annotations$SpkrCode[crow] = "L" 
+				# annotations$SpkrCode[crow] = "L" 
+				annotations$SpkrCode[crow] = "R" 
 			} else if (annotations$InfIPA[crow] == "sneeze" | annotations$InfIPA[crow] == "cough" | annotations$InfIPA[crow] == "burp" | annotations$InfIPA[crow] == "hiccup" | annotations$InfIPA[crow] == "breathing" | annotations$InfIPA[crow] == "breath" | annotations$InfIPA[crow] == "gasp" | annotations$InfIPA[crow] == "sigh" | annotations$InfIPA[crow] == "wheeze" | annotations$InfIPA[crow] == "wheezing" | annotations$InfIPA[crow] == "snort" | annotations$InfIPA[crow] == "suck" | annotations$InfIPA[crow] == "V" | annotations$InfIPA[crow] == "R") {
 			annotations$SpkrCode[crow] = "NA"	
 			# } else if (annotations$SpkrCode[crow] == "C") {

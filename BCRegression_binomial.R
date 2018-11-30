@@ -4,29 +4,31 @@ library(lme4)
 library(lmerTest)
 library(car)
 
-eventcodes <- read.csv("eventcodes1sec06292017.csv", header = TRUE)
+# eventcodes <- read.csv("eventcodes1sec06292017.csv", header = TRUE)
 # eventcodes <- read.csv("eventcodes2sec06292017.csv", header = TRUE)
 # eventcodes <- read.csv("eventcodes5sec06292017.csv", header = TRUE)
+
+eventcodes <- read.csv("eventcodes1sec11302018_2.csv", header = TRUE)
 
 
 # Regression Models with IDS or ODS as Event 2
 IDSfollow <- glmer(Event2T ~ (1|InfantID) + Event1C + Event1X + Event1R, dat=eventcodes, family=binomial())
 summary(IDSfollow)
-confint(IDSfollow, level=0.999)
+#confint(IDSfollow, level=0.999)
 
 ODSfollow <- glmer(Event2N ~ (1|InfantID) + Event1C + Event1X + Event1R, dat=eventcodes, family=binomial())
 summary(ODSfollow)
-confint(ODSfollow, level=0.999)
+#confint(ODSfollow, level=0.999)
 
 
 # Regression Models with IDS or ODS as Event 1
 IDSled <- glmer(Event1T ~ (1|InfantID) + Event2C + Event2X + Event2R, dat=eventcodes, family=binomial())
 summary(IDSled)
-confint(IDSled, level=0.999)
+#confint(IDSled, level=0.999)
 
 ODSled <- glmer(Event1N ~ (1|InfantID) + Event2C + Event2X + Event2R, dat=eventcodes, family=binomial())
 summary(ODSled)
-confint(ODSled, level=0.999)
+#confint(ODSled, level=0.999)
 
 
 # Regression models that compare infant codes
