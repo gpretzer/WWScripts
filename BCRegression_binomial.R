@@ -12,21 +12,21 @@ for (pausedur in c(1,2,5)){
   # Regression Models with IDS or ODS as Event 2
   IDSfollow <- glmer(Event2T ~ (1|InfantID) + Event1C + Event1X + Event1R, dat=eventcodes, family=binomial())
   print(summary(IDSfollow))
-  #print(confint(IDSfollow, level=0.999))
+  print(confint(IDSfollow, level=0.999))
   
   ODSfollow <- glmer(Event2N ~ (1|InfantID) + Event1C + Event1X + Event1R, dat=eventcodes, family=binomial())
   print(summary(ODSfollow))
-  #print(confint(ODSfollow, level=0.999))
+  print(confint(ODSfollow, level=0.999))
   
   
   # Regression Models with IDS or ODS as Event 1
   IDSled <- glmer(Event1T ~ (1|InfantID) + Event2C + Event2X + Event2R, dat=eventcodes, family=binomial())
   print(summary(IDSled))
-  #print(confint(IDSled, level=0.999))
+  print(confint(IDSled, level=0.999))
   
   ODSled <- glmer(Event1N ~ (1|InfantID) + Event2C + Event2X + Event2R, dat=eventcodes, family=binomial())
   print(summary(ODSled))
-  #print(confint(ODSled, level=0.999))
+  print(confint(ODSled, level=0.999))
   
   
   # Regression models that compare infant codes

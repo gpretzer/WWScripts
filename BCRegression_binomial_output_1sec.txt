@@ -29,6 +29,12 @@ Correlation of Fixed Effects:
 Event1C -0.036              
 Event1X -0.058  0.147       
 Event1R -0.037  0.083  0.125
+                0.05 %    99.95 %
+.sig01       0.6837479  2.4585447
+(Intercept) -3.5162218 -1.3399103
+Event1C      0.6555132  1.3217386
+Event1X      0.4822803  0.9201771
+Event1R      1.3202776  2.0898128
 Generalized linear mixed model fit by maximum likelihood (Laplace Approximation) ['glmerMod']
  Family: binomial  ( logit )
 Formula: Event2N ~ (1 | InfantID) + Event1C + Event1X + Event1R
@@ -60,6 +66,12 @@ Correlation of Fixed Effects:
 Event1C -0.036              
 Event1X -0.061  0.089       
 Event1R -0.028  0.050  0.074
+                0.05 %    99.95 %
+.sig01       0.5596581  1.9744933
+(Intercept) -3.3157915 -1.5434601
+Event1C     -0.1509313  0.6868766
+Event1X     -0.3172778  0.2454157
+Event1R     -0.4416830  0.5840257
 Generalized linear mixed model fit by maximum likelihood (Laplace Approximation) ['glmerMod']
  Family: binomial  ( logit )
 Formula: Event1T ~ (1 | InfantID) + Event2C + Event2X + Event2R
@@ -91,6 +103,12 @@ Correlation of Fixed Effects:
 Event2C -0.029              
 Event2X -0.052  0.122       
 Event2R -0.036  0.070  0.110
+                0.05 %    99.95 %
+.sig01       0.6764469  2.4357121
+(Intercept) -3.4002900 -1.2452719
+Event2C      0.1481026  0.8596340
+Event2X      0.1593988  0.6104643
+Event2R      1.1297874  1.9039904
 Generalized linear mixed model fit by maximum likelihood (Laplace Approximation) ['glmerMod']
  Family: binomial  ( logit )
 Formula: Event1N ~ (1 | InfantID) + Event2C + Event2X + Event2R
@@ -122,6 +140,12 @@ Correlation of Fixed Effects:
 Event2C -0.037              
 Event2X -0.065  0.095       
 Event2R -0.028  0.052  0.078
+                 0.05 %    99.95 %
+.sig01       0.56414990  1.9867992
+(Intercept) -3.35267535 -1.5685950
+Event2C     -0.07457731  0.7536477
+Event2X     -0.15078483  0.3919144
+Event2R     -0.38581210  0.6334994
 Generalized linear mixed model fit by maximum likelihood (Laplace Approximation) ['glmerMod']
  Family: binomial  ( logit )
 Formula: Event2T ~ (1 | InfantID) + Event1CvX
