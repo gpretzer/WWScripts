@@ -1,0 +1,2 @@
+Begin Time - ss.msec	End Time - ss.msec	Infant Phonetic Transcription	Direction
+
