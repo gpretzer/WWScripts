@@ -1,4 +1,4 @@
-txtpath = "WWSegmentOutput"
+txtpath = "WWSegmentOutput/"
 
 source("spkrcode.R")
 source("pauseoverlap.R")
@@ -21,14 +21,13 @@ for (pausedur in c(1,2,5)){
     
     # Prepare metadata variables to be included in data frame for analysis.
     InfantID = as.character(metadata$InfantID[fiveminnum])
-    SegmentID = metadata$SegmentID[fiveminnum]
     FileName = as.character(metadata$TxtFileName[fiveminnum])
     
     # Get the 2-event sequences for subsequent contingency analyses.
-    sequencecodes = sequenceevents(newannotations, InfantID, SegmentID, FileName)
+    sequencecodes = sequenceevents(newannotations, InfantID, FileName)
     
   }
   
-  write.csv(sequencecodes, file = paste("sequencecodes",pausedur,"sec.csv",sep="")
+  write.csv(sequencecodes, file = paste("sequencecodes",pausedur,"sec.csv",sep=""))
   
 }

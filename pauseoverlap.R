@@ -1,7 +1,5 @@
 pauseoverlap = function(annotations, pausedur) {
 	
-	# ASW: It would be nice to write a unit test for this function.
-	
 	# Initializations prior to upcoming for loop
 	event1 = data.frame(start=annotations[1,]$start,
 				end=annotations[1,]$end,
@@ -30,7 +28,7 @@ pauseoverlap = function(annotations, pausedur) {
 		if (timediff < 0){
 			
 			# If event1 continues for > pausedur after the end of event2, create a copy of event1 and make it the third event in the sequence
-			if ((event1[1,]$end - event2[1,]$end) >= pausedur){ # ASW: I changed the ">" to ">=" to match the code below. Analyses should be re-run because this may slightly change the results (I doubt it will change them qualitatively).
+			if ((event1[1,]$end - event2[1,]$end) >= pausedur){
 				newannotations[nrow(newannotations),]$end = event2[1,]$end # Make the end time of the first event be the end of the overlapping portion
 				newannotations = rbind(newannotations,c(event2[1,]$start,
 									event2[1,]$end,event2[1,]$SpkrCode)) # Put the second event into newannotations
