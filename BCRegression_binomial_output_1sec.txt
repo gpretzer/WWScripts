@@ -1,0 +1,286 @@
+Generalized linear mixed model fit by maximum likelihood (Laplace Approximation) ['glmerMod']
+ Family: binomial  ( logit )
+Formula: Event2T ~ (1 | InfantID) + Event1C + Event1X + Event1R
+   Data: eventcodes
+
+     AIC      BIC   logLik deviance df.resid 
+ 10482.8  10520.6  -5236.4  10472.8    14426 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-2.1632 -0.4211 -0.3005 -0.1941  5.2620 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ InfantID (Intercept) 1.375    1.173   
+Number of obs: 14431, groups:  InfantID, 19
+
+Fixed effects:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -2.3904     0.2733  -8.747   <2e-16 ***
+Event1C       0.9937     0.1010   9.840   <2e-16 ***
+Event1X       0.7029     0.0664  10.585   <2e-16 ***
+Event1R       1.7078     0.1166  14.644   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+        (Intr) Evnt1C Evnt1X
+Event1C -0.036              
+Event1X -0.058  0.147       
+Event1R -0.037  0.083  0.125
+Generalized linear mixed model fit by maximum likelihood (Laplace Approximation) ['glmerMod']
+ Family: binomial  ( logit )
+Formula: Event2N ~ (1 | InfantID) + Event1C + Event1X + Event1R
+   Data: eventcodes
+
+     AIC      BIC   logLik deviance df.resid 
+  9124.9   9162.8  -4557.5   9114.9    14426 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-0.7960 -0.3768 -0.2983 -0.1780 13.8533 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ InfantID (Intercept) 0.9237   0.9611  
+Number of obs: 14431, groups:  InfantID, 19
+
+Fixed effects:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept) -2.40371    0.22443 -10.710   <2e-16 ***
+Event1C      0.28392    0.12670   2.241    0.025 *  
+Event1X     -0.02942    0.08517  -0.345    0.730    
+Event1R      0.09737    0.15474   0.629    0.529    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+        (Intr) Evnt1C Evnt1X
+Event1C -0.036              
+Event1X -0.061  0.089       
+Event1R -0.028  0.050  0.074
+Generalized linear mixed model fit by maximum likelihood (Laplace Approximation) ['glmerMod']
+ Family: binomial  ( logit )
+Formula: Event1T ~ (1 | InfantID) + Event2C + Event2X + Event2R
+   Data: eventcodes
+
+     AIC      BIC   logLik deviance df.resid 
+ 10627.8  10665.7  -5308.9  10617.8    14426 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-1.3912 -0.4230 -0.3119 -0.2056  4.9358 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ InfantID (Intercept) 1.348    1.161   
+Number of obs: 14431, groups:  InfantID, 19
+
+Fixed effects:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -2.2853     0.2696  -8.475  < 2e-16 ***
+Event2C       0.5119     0.1078   4.750 2.03e-06 ***
+Event2X       0.3873     0.0684   5.663 1.49e-08 ***
+Event2R       1.5205     0.1173  12.962  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+        (Intr) Evnt2C Evnt2X
+Event2C -0.029              
+Event2X -0.052  0.122       
+Event2R -0.036  0.070  0.110
+Generalized linear mixed model fit by maximum likelihood (Laplace Approximation) ['glmerMod']
+ Family: binomial  ( logit )
+Formula: Event1N ~ (1 | InfantID) + Event2C + Event2X + Event2R
+   Data: eventcodes
+
+     AIC      BIC   logLik deviance df.resid 
+  9113.5   9151.4  -4551.7   9103.5    14426 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-0.8182 -0.3737 -0.2955 -0.1807 14.1529 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ InfantID (Intercept) 0.9367   0.9678  
+Number of obs: 14431, groups:  InfantID, 19
+
+Fixed effects:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept) -2.43472    0.22612 -10.767  < 2e-16 ***
+Event2C      0.35468    0.12509   2.836  0.00458 ** 
+Event2X      0.12608    0.08213   1.535  0.12475    
+Event2R      0.14937    0.15355   0.973  0.33069    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+        (Intr) Evnt2C Evnt2X
+Event2C -0.037              
+Event2X -0.065  0.095       
+Event2R -0.028  0.052  0.078
+Generalized linear mixed model fit by maximum likelihood (Laplace Approximation) ['glmerMod']
+ Family: binomial  ( logit )
+Formula: Event2T ~ (1 | InfantID) + Event1CvX
+   Data: eventcodes
+
+     AIC      BIC   logLik deviance df.resid 
+  2668.0   2685.8  -1331.0   2662.0     2824 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-1.8735 -0.5426 -0.3668 -0.1244  3.9141 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ InfantID (Intercept) 1.14     1.068   
+Number of obs: 2827, groups:  InfantID, 19
+
+Fixed effects:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -1.5929     0.2553  -6.240 4.38e-10 ***
+Event1CvX     0.2637     0.1172   2.249   0.0245 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+          (Intr)
+Event1CvX -0.120
+Generalized linear mixed model fit by maximum likelihood (Laplace Approximation) ['glmerMod']
+ Family: binomial  ( logit )
+Formula: Event2T ~ (1 | InfantID) + Event1RvX
+   Data: eventcodes
+
+     AIC      BIC   logLik deviance df.resid 
+  2491.6   2509.2  -1242.8   2485.6     2612 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-2.4048 -0.5554 -0.3728 -0.1008  3.8699 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ InfantID (Intercept) 1.306    1.143   
+Number of obs: 2615, groups:  InfantID, 19
+
+Fixed effects:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -1.6446     0.2725  -6.034  1.6e-09 ***
+Event1RvX     0.9312     0.1339   6.956  3.5e-12 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+          (Intr)
+Event1RvX -0.117
+Generalized linear mixed model fit by maximum likelihood (Laplace Approximation) ['glmerMod']
+ Family: binomial  ( logit )
+Formula: Event2T ~ (1 | InfantID) + Event1RvC
+   Data: eventcodes
+
+     AIC      BIC   logLik deviance df.resid 
+  1163.1   1178.0   -578.5   1157.1     1045 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-2.5667 -0.6237 -0.4031  0.7796  3.6890 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ InfantID (Intercept) 1.234    1.111   
+Number of obs: 1048, groups:  InfantID, 19
+
+Fixed effects:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -1.2838     0.2795  -4.594 4.35e-06 ***
+Event1RvC     0.6223     0.1609   3.868  0.00011 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+          (Intr)
+Event1RvC -0.258
+Generalized linear mixed model fit by maximum likelihood (Laplace Approximation) ['glmerMod']
+ Family: binomial  ( logit )
+Formula: Event1T ~ (1 | InfantID) + Event2CvX
+   Data: eventcodes
+
+     AIC      BIC   logLik deviance df.resid 
+  2462.8   2480.6  -1228.4   2456.8     2825 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-1.2362 -0.4989 -0.4105 -0.2107  4.7459 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ InfantID (Intercept) 1.053    1.026   
+Number of obs: 2828, groups:  InfantID, 19
+
+Fixed effects:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept) -1.81436    0.24784  -7.321 2.47e-13 ***
+Event2CvX    0.07173    0.12432   0.577    0.564    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+          (Intr)
+Event2CvX -0.121
+Generalized linear mixed model fit by maximum likelihood (Laplace Approximation) ['glmerMod']
+ Family: binomial  ( logit )
+Formula: Event1T ~ (1 | InfantID) + Event2RvX
+   Data: eventcodes
+
+     AIC      BIC   logLik deviance df.resid 
+  2323.0   2340.7  -1158.5   2317.0     2613 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-1.4592 -0.5139 -0.3608 -0.0966  5.1896 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ InfantID (Intercept) 1.258    1.122   
+Number of obs: 2616, groups:  InfantID, 19
+
+Fixed effects:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -1.8776     0.2694  -6.970 3.16e-12 ***
+Event2RvX     1.0645     0.1374   7.747 9.43e-15 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+          (Intr)
+Event2RvX -0.131
+Generalized linear mixed model fit by maximum likelihood (Laplace Approximation) ['glmerMod']
+ Family: binomial  ( logit )
+Formula: Event1T ~ (1 | InfantID) + Event2RvC
+   Data: eventcodes
+
+     AIC      BIC   logLik deviance df.resid 
+  1091.2   1106.1   -542.6   1085.2     1043 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-1.2998 -0.5702 -0.4041  0.7694  3.6100 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ InfantID (Intercept) 1.198    1.094   
+Number of obs: 1046, groups:  InfantID, 19
+
+Fixed effects:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -1.7157     0.2818  -6.087 1.15e-09 ***
+Event2RvC     0.9597     0.1686   5.692 1.26e-08 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+          (Intr)
+Event2RvC -0.295
