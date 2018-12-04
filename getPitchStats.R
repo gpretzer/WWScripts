@@ -23,10 +23,10 @@ adultUttInfo = data.frame(
 for (fiveminnum in 1:nrow(fivemin_info)){
   
   # Path and name of the txt file containing listener annotations exported from ELAN
-  txtfile = paste("/Users/awarlau/Documents/Box Sync/Gina/WWtxtFiles/",toString(fivemin_info$TxtFileName[fiveminnum]),sep="")
+  txtfile = paste("WWSegmentOutput/",toString(fivemin_info$TxtFileName[fiveminnum]),sep="")
   
   # Read the annotations in from the txt file
-  annotations = read.table(txtfile,sep="\t",quote="",header=TRUE,col.names=c("start","end","InfIPA","AdultIPA","ortho","dir"),colClasses = c("numeric", "numeric", "character", "character","character", "character"))
+  annotations = read.table(txtfile,sep="\t",quote="",header=TRUE,col.names=c("start","end","InfIPA","dir"),colClasses = c("numeric", "numeric", "character", "character"))
   
   # Delete irrelevant columns
   annotations = subset(annotations, select = c(start,end,dir))
