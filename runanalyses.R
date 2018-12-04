@@ -1,4 +1,4 @@
-txtpath = "WWSegmentOutput/"
+txtpath = "WWSegmentOutput"
 
 source("spkrcode.R")
 source("pauseoverlap.R")
