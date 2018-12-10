@@ -1,0 +1,98 @@
+
+R version 3.5.1 (2018-07-02) -- "Feather Spray"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin15.6.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[R.app GUI 1.70 (7543) x86_64-apple-darwin15.6.0]
+
+[History restored from /Users/ginapretzer/.Rapp.history]
+
+> setwd("/Volumes/Research/WWScripts")
+> 
+> ### Counts for 1sec ###
+> metadata1sec = read.csv("eventcodes1sec.csv")
+> IDS = length(which(metadata1sec$Event1 == "T"))
+> print(IDS)
+[1] 2127
+> ODS = length(which(metadata1sec$Event1 == "N"))
+> print(ODS)
+[1] 1541
+> Unknown = length(which(metadata1sec$Event1 == "U"))
+> print(Unknown)
+[1] 185
+> Canon = length(which(metadata1sec$Event1 == "C"))
+> print(Canon)
+[1] 630
+> NonCanon = length(which(metadata1sec$Event1 == "X"))
+> print(NonCanon)
+[1] 2197
+> Reflex = length(which(metadata1sec$Event1 == "R"))
+> print(Reflex)
+[1] 418
+> Pause = length(which(metadata1sec$Event1 == "P"))
+> print(Pause)
+[1] 7302
+> 
+> ### Counts for 2sec ###
+> metadata2sec = read.csv("eventcodes2sec.csv")
+> IDS = length(which(metadata2sec$Event1 == "T"))
+> print(IDS)
+[1] 2114
+> ODS = length(which(metadata2sec$Event1 == "N"))
+> print(ODS)
+[1] 1526
+> Unknown = length(which(metadata2sec$Event1 == "U"))
+> print(Unknown)
+[1] 184
+> Canon = length(which(metadata2sec$Event1 == "C"))
+> print(Canon)
+[1] 613
+> NonCanon = length(which(metadata2sec$Event1 == "X"))
+> print(NonCanon)
+[1] 2183
+> Reflex = length(which(metadata2sec$Event1 == "R"))
+> print(Reflex)
+[1] 399
+> Pause = length(which(metadata2sec$Event1 == "P"))
+> print(Pause)
+[1] 2919
+> 
+> 
+> ### Counts for 5sec ###
+> metadata5sec = read.csv("eventcodes5sec.csv")
+> IDS = length(which(metadata5sec$Event1 == "T"))
+> print(IDS)
+[1] 2107
+> ODS = length(which(metadata5sec$Event1 == "N"))
+> print(ODS)
+[1] 1519
+> Unknown = length(which(metadata5sec$Event1 == "U"))
+> print(Unknown)
+[1] 184
+> Canon = length(which(metadata5sec$Event1 == "C"))
+> print(Canon)
+[1] 604
+> NonCanon = length(which(metadata5sec$Event1 == "X"))
+> print(NonCanon)
+[1] 2179
+> Reflex = length(which(metadata5sec$Event1 == "R"))
+> print(Reflex)
+[1] 375
+> Pause = length(which(metadata5sec$Event1 == "P"))
+> print(Pause)
+[1] 770
+> 
