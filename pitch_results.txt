@@ -1,4 +1,29 @@
-Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+[1] "IDS mean of mean f0 in mel:"
+[1] 238.2015
+[1] "IDS sd of mean f0 in mel:"
+[1] 73.52714
+[1] "ODS mean of mean f0 in mel:"
+[1] 210.3493
+[1] "ODS std of mean f0 in mel:"
+[1] 81.26565
+[1] "IDS mean of std f0 in mel:"
+[1] 45.76944
+[1] "IDS std of std f0 in mel:"
+[1] 36.65299
+[1] "ODS mean of std f0 in mel:"
+[1] 53.77657
+[1] "ODS sd of std f0 in mel:"
+[1] 48.16154
+[1] "IDS mean of intensity in dB:"
+[1] 70.22519
+[1] "IDS sd of intensity in dB:"
+[1] 7.413934
+[1] "ODS mean of intensity in dB:"
+[1] 64.46252
+[1] "ODS sd of intensity in dB:"
+[1] 8.091818
+Linear mixed model fit by REML t-tests use Satterthwaite approximations to degrees of freedom [
+lmerMod]
 Formula: meanf0mel ~ (1 | InfantID) + addressee
    Data: subset(adultUttInfo, addressee == "N" | addressee == "T")
 
@@ -16,15 +41,16 @@ Number of obs: 3475, groups:  InfantID, 19
 
 Fixed effects:
             Estimate Std. Error       df t value Pr(>|t|)    
-(Intercept)  212.685      5.267   22.006  40.381  < 2e-16 ***
-addresseeT    23.280      2.954 3246.180   7.882 4.35e-15 ***
+(Intercept)  212.685      5.267   22.000  40.381  < 2e-16 ***
+addresseeT    23.280      2.954 3245.000   7.882 4.44e-15 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Correlation of Fixed Effects:
            (Intr)
 addresseeT -0.302
-Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Linear mixed model fit by REML t-tests use Satterthwaite approximations to degrees of freedom [
+lmerMod]
 Formula: stdf0mel ~ (1 | InfantID) + addressee
    Data: subset(adultUttInfo, addressee == "N" | addressee == "T")
 
@@ -42,15 +68,16 @@ Number of obs: 3467, groups:  InfantID, 19
 
 Fixed effects:
             Estimate Std. Error       df t value Pr(>|t|)    
-(Intercept)   52.640      3.015   20.899  17.459 6.11e-14 ***
-addresseeT    -3.090      1.619 3278.378  -1.909   0.0564 .  
+(Intercept)   52.640      3.015   21.000  17.459 6.13e-14 ***
+addresseeT    -3.090      1.619 3279.000  -1.909   0.0564 .  
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Correlation of Fixed Effects:
            (Intr)
 addresseeT -0.289
-Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Linear mixed model fit by REML t-tests use Satterthwaite approximations to degrees of freedom [
+lmerMod]
 Formula: stdf0Hz ~ (1 | InfantID) + addressee
    Data: subset(adultUttInfo, addressee == "N" | addressee == "T")
 
@@ -68,15 +95,16 @@ Number of obs: 3467, groups:  InfantID, 19
 
 Fixed effects:
             Estimate Std. Error       df t value Pr(>|t|)    
-(Intercept)   86.250      5.295   21.121  16.290 1.95e-13 ***
-addresseeT    -4.556      2.919 3250.758  -1.561    0.119    
+(Intercept)   86.250      5.295   21.000  16.290 1.95e-13 ***
+addresseeT    -4.556      2.919 3252.000  -1.561    0.119    
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Correlation of Fixed Effects:
            (Intr)
 addresseeT -0.297
-Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Linear mixed model fit by REML t-tests use Satterthwaite approximations to degrees of freedom [
+lmerMod]
 Formula: intensity ~ (1 | InfantID) + addressee
    Data: subset(adultUttInfo, addressee == "N" | addressee == "T")
 
@@ -94,8 +122,8 @@ Number of obs: 3605, groups:  InfantID, 19
 
 Fixed effects:
              Estimate Std. Error        df t value Pr(>|t|)    
-(Intercept)   63.6544     0.8949   18.7948   71.13   <2e-16 ***
-addresseeT     5.5740     0.2713 3600.8767   20.54   <2e-16 ***
+(Intercept)   63.6544     0.8949   19.0000   71.13   <2e-16 ***
+addresseeT     5.5740     0.2713 3601.0000   20.54   <2e-16 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 

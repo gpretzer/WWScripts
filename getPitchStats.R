@@ -112,10 +112,40 @@ write.csv(adultUttInfo,file="adultUttInfo.csv")
 
 adultUttInfo = read.csv("adultUttInfo.csv")
 
+sink("pitch_results.txt")
+
+print("IDS mean of mean f0 in mel:")
+mean(subset(adultUttInfo,addressee=="T")$meanf0mel,na.rm=TRUE)
+print("IDS sd of mean f0 in mel:")
+sd(subset(adultUttInfo,addressee=="T")$meanf0mel,na.rm=TRUE)
+
+print("ODS mean of mean f0 in mel:")
+mean(subset(adultUttInfo,addressee=="N")$meanf0mel,na.rm=TRUE)
+print("ODS std of mean f0 in mel:")
+sd(subset(adultUttInfo,addressee=="N")$meanf0mel,na.rm=TRUE)
+
+print("IDS mean of std f0 in mel:")
+mean(subset(adultUttInfo,addressee=="T")$stdf0mel,na.rm=TRUE)
+print("IDS std of std f0 in mel:")
+sd(subset(adultUttInfo,addressee=="T")$stdf0mel,na.rm=TRUE)
+
+print("ODS mean of std f0 in mel:")
+mean(subset(adultUttInfo,addressee=="N")$stdf0mel,na.rm=TRUE)
+print("ODS sd of std f0 in mel:")
+sd(subset(adultUttInfo,addressee=="N")$stdf0mel,na.rm=TRUE)
+
+print("IDS mean of intensity in dB:")
+mean(subset(adultUttInfo,addressee=="T")$intensity,na.rm=TRUE)
+print("IDS sd of intensity in dB:")
+sd(subset(adultUttInfo,addressee=="T")$intensity,na.rm=TRUE)
+
+print("ODS mean of intensity in dB:")
+mean(subset(adultUttInfo,addressee=="N")$intensity,na.rm=TRUE)
+print("ODS sd of intensity in dB:")
+sd(subset(adultUttInfo,addressee=="N")$intensity,na.rm=TRUE)
+
 library(lme4)
 library(lmerTest)
-
-sink("pitch_results.txt")
 
 meanf0mel_test = lmer(meanf0mel ~ (1|InfantID) + addressee, dat = subset(adultUttInfo,addressee=="N"|addressee=="T"))
 summary(meanf0mel_test)
